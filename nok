@@ -1,0 +1,22 @@
+#include <iostream>;
+#include <conio.h>;
+
+using  namespace std;
+
+int GCD (int a, int b) 
+{
+    if (a==0) return b;
+    if (b==0) return a;
+    return GCD(b, a%b);
+}
+
+int main()
+{
+    int a, b, nok;
+    cin>>a;
+    cin>>b;
+    if (a==0 or b==0) nok=GCD(a,b);
+    else nok=a*b/GCD(a,b);
+    cout<<"nok="<<nok<<endl;
+    return 0;
+}
